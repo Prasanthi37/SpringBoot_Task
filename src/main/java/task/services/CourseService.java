@@ -29,7 +29,11 @@ class CourseServiceImpl implements CourseService {
 
     @Override
     public List<Course> getAllCourses() {
-        return courseRepo.findAll();
+        var list= courseRepo.findAll();
+        if(list.isEmpty()) {
+        	throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Course table is Empty!");
+        }
+        return list;
     }
 
     @Override

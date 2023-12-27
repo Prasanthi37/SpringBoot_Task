@@ -28,12 +28,10 @@ public class Trainer {
 	
 	@ManyToOne
 	@JoinColumn(name = "course_id", insertable = false, updatable = false) 
-	@JsonIgnore
 	private Course course;
 	
 	@ManyToOne
 	@JoinColumn(name = "id", insertable = false, updatable = false) 
-	@JsonIgnore
 	private Employee employee;
 
 	public int getTrainerId() {

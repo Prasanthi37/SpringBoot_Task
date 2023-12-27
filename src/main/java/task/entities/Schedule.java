@@ -44,7 +44,6 @@ public class Schedule {
 	
 	@ManyToOne
 	@JoinColumn(name = "course_id", insertable = false, updatable = false) 
-	@JsonIgnore
 	private Course course;
 
 	public int getId() {

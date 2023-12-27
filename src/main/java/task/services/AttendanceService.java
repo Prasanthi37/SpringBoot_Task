@@ -63,10 +63,12 @@ class AttendanceServiceImpl implements AttendanceService{
                 attendanceRepo.deleteById(attendanceId);
             else
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Attendance Id Not Found!");
-        } catch (Exception ex) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
-                    "An error occurred while processing the request: " + ex.getMessage());
-        }
+
+       } catch (Exception ex) {
+          throw new ResponseStatusException(HttpStatus.NOT_FOUND,
+                  "An error occurred while processing the request: " + ex.getMessage());
+      }
+       
     }
 
 	@Override

@@ -55,7 +55,7 @@ public class ScheduleService {
             else
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Schedule Id Not Found!");
         } catch (Exception ex) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "An error occurred while processing the request: " + ex.getMessage());
         }
     }
@@ -74,7 +74,7 @@ public class ScheduleService {
             } else
                 throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Schedule Id Not Found!");
         } catch (Exception ex) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,
                     "An error occurred while processing the request: " + ex.getMessage());
         }
     }
